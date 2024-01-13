@@ -7,12 +7,17 @@ function App() {
   let [counter, setCounter] = useState(0);
   // let counter = 0;
   function addValue() { 
-    setCounter(counter+1);
+   
+    if(counter < 5){
+      setCounter(counter+1);
+    }
     console.log(counter);
   }
   function removeValue() { 
     // counter = counter - 1;
+    if(counter > 0){
     setCounter(counter-1);
+  }
     console.log(counter)
   }
   return (
